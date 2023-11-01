@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block nameasd %}
+  {% block title %}
+    Hello HomeController!
+  {% endblock %}
+
+  {% block body %}
+    {% block header %}
+      {% include '/partials/header.html.twig' %}
+    {% endblock %}
+
+    {% block table %}
+      <div class="container">
+        {% include '/partials/table.html.twig' %}
+      </div>
+      <link rel="stylesheet" href="{{ asset('styles/main.css') }}" />
+    {% endblock %}
+
+    {% block footer %}
+      {% include '/partials/footer.html.twig' %}
+    {% endblock %}
+  {% endblock %}
+{% endblock %}
