@@ -1,54 +1,23 @@
 {% block table %}
-  <table  id="table">
+  <table id="table">
     <tr>
       <th>Fullname</th>
       <th>DNI</th>
       <th>Age</th>
       <th>Phone</th>
       <th>Email</th>
+       <th>Options</th>
     </tr>
-    <tr>
-      <td class="cell">Juan Pablo Villalba</td>
-      <td class="cell">46355777</td>
-      <td class="cell">18</td>
-      <td class="cell">1138929372</td>
-      <td class="cell">contact.juampavlb@gmail.com</td>
-    </tr>
-    <tr>
-      <td class="cell">Juan Pablo Villalba</td>
-      <td class="cell">46355777</td>
-      <td class="cell">18</td>
-      <td class="cell">1138929372</td>
-      <td class="cell">contact.juampavlb@gmail.com</td>
-    </tr>
-    <tr>
-      <td class="cell">Juan Pablo Villalba</td>
-      <td class="cell">46355777</td>
-      <td class="cell">18</td>
-      <td class="cell">1138929372</td>
-      <td class="cell">contact.juampavlb@gmail.com</td>
-    </tr>
-    <tr>
-      <td class="cell">Juan Pablo Villalba</td>
-      <td class="cell">46355777</td>
-      <td class="cell">18</td>
-      <td class="cell">1138929372</td>
-      <td class="cell">contact.juampavlb@gmail.com</td>
-    </tr>
-    <tr>
-      <td class="cell">Juan Pablo Villalba</td>
-      <td class="cell">46355777</td>
-      <td class="cell">18</td>
-      <td class="cell">1138929372</td>
-      <td class="cell">contact.juampavlb@gmail.com</td>
-    </tr>
-    <tr>
-      <td class="cell">Juan Pablo Villalba</td>
-      <td class="cell">46355777</td>
-      <td class="cell">18</td>
-      <td class="cell">1138929372</td>
-      <td class="cell">contact.juampavlb@gmail.com</td>
-    </tr>
+    {% for user in users %}
+      <tr>
+        <td class="cell">{{ user.fullname }}</td>
+        <td class="cell">{{ user.dni }}</td>
+        <td class="cell">{{ user.age }}</td>
+        <td class="cell">{{ user.phone }}</td>
+        <td class="cell">{{ user.email }}</td>
+        <td class="cell"><a href='/get/user/{{user.id}}' target="_blank">Ver</a></td>
+      </tr>
+    {% endfor %}
   </table>
   <link rel="stylesheet" href="{{ asset('styles/table.css') }}" />
 {% endblock %}
