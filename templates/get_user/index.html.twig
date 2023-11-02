@@ -1,13 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GetUserController!{% endblock %}
+{% block title %}
+  Hello GetUserController!
+{% endblock %}
 
 {% block body %}
+  {% block header %}
+    {% include '/partials/header.html.twig' %}
+  {% endblock %}
 
-<h1>{{user.fullname}}</h1>
-<h1>{{user.dni}}</h1>
-<h1>{{user.age}}</h1>
-<h1>{{user.phone}}</h1>
-<h1>{{user.email}}</h1>
-
+  <h1>{{ user.fullname }}</h1>
+  <h1>{{ user.dni }}</h1>
+  <h1>{{ user.age }}</h1>
+  <h1>{{ user.phone }}</h1>
+  <h1>{{ user.email }}</h1>
 {% endblock %}

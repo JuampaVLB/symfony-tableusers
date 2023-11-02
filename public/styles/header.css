@@ -10,10 +10,27 @@
 
 #header .navbar {
     display: flex;
-    justify-content: space-between;
-    padding-left: 25px;
+    justify-content: space-around;
     align-items: center;
-    width: 60%;
+    width: 100%;
+}
+
+#header .navbar .navbar_list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+
+}
+
+#header .navbar .navbar_list>li>a {
+    text-decoration: none;
+    color: #fff;
+    transition: .2s ease;
+}
+
+#header .navbar .navbar_list>li>a:hover {
+    transition: .2s ease;
+    color: #ea6153;
 }
 
 

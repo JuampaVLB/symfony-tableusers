@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block body %}
+  {% block header %}
+    {% include '/partials/header.html.twig' %}
+  {% endblock %}
   {% for success in app.flashes('success') %}
     {{ success }}
   {% endfor %}

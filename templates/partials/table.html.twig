@@ -15,7 +15,8 @@
         <td class="cell">{{ user.age }}</td>
         <td class="cell">{{ user.phone }}</td>
         <td class="cell">{{ user.email }}</td>
-        <td class="cell"><a href='/get/user/{{user.id}}' target="_blank">Ver</a></td>
+        <td class="cell"><a href='/get/user/{{user.id}}' target="_blank" class="show_user">Ver</a>
+        </td>
       </tr>
     {% endfor %}
   </table>

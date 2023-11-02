@@ -1,10 +1,23 @@
-  {% block header %}
-    <header id="header">
-      <nav class="navbar">
-        <p>LOGO</p>
-        <p>Centro de Datos</p>
-      </nav>
-    </header>
+{% block header %}
+  <header id="header">
+    <nav class="navbar">
+      <p>LOGO</p>
+      <ul class="navbar_list">
+        <li>
+          <a href="/">Listar</a>
+        </li>
+        <li>
+          <a href="/create/user">Crear</a>
+        </li>
+        <li>
+          <a href="/">Modificar</a>
+        </li>
+        <li>
+          <a href="/">Borrar</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <link rel="stylesheet" href="{{ asset('styles/header.css') }}">
-  {% endblock %}
+  <link rel="stylesheet" href="{{ asset('styles/header.css') }}" />
+{% endblock %}
